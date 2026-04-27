@@ -39,7 +39,7 @@ variable "from_port" {
 
 variable "to_port" {
     type = number
-    default 0
+    default= 0
 }
 
 variable "cidr_blocks" {
