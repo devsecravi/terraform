@@ -9,7 +9,7 @@ resource "aws_instance" "example"{
 
      tags = {
 
-        Name = "roboshop"
+        Name = var.instances[count.index]
         Project = "roboshop"
      }
 }
