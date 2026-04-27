@@ -15,20 +15,19 @@ resource "aws_instance" "example"{
 
 
 resource "aws_security_group" "allow_tls" {
-  name        = "allow-all-terraform"
-  description = "Allow inbound web traffic"
-  vpc_id      = aws_vpc.main.id
+  name        = "allow-all-roboshop"
+  description = "Allow TLS inbound traffic and all outbound traffic"
 
 
-    ingress {
+    egress {
         from_port        = 0
         to_port          = 0
         protocol         = "-1"
         cidr_blocks      = ["0.0.0.0/0"]
         ipv6_cidr_blocks = ["::/0"]
     }
-  
-        egress {
+
+    ingress {
         from_port        = 0
         to_port          = 0
         protocol         = "-1"
