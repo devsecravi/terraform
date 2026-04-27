@@ -11,7 +11,7 @@ resource "aws_instance" "example"{
 
 
 resource "aws_security_group" "allow_tls" {
-  name        = var.aws_security_group_name
+  name        = var.sg_name
   description = var.description
 
 

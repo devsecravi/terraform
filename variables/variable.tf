@@ -20,9 +20,9 @@ variable "tags_ami" {
       }
 }
 
-variable "aws_security_group_name"{
+variable "sg_name"{
      type = string
-     default = "allow-all-roboshop"
+     default = "allow-all-roboshop-default"
 }
 
 variable "description" {
