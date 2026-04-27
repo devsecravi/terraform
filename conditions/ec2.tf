@@ -2,7 +2,7 @@ resource "aws_instance" "example"{
 
      ami = var.ami_instance
 
-     instance_type = var.environment == dev ? "t3.micro" : "t3.small"
+     instance_type = var.environment == "dev" ? "t3.micro" : "t3.small"
 
      vpc_security_group_ids = [aws_security_group.allow_tls.id]
 
