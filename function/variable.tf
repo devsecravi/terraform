@@ -3,7 +3,7 @@ variable "common_tags" {
       default = {
          Project = "roboshop"
          Terraform = "true"
-        Environment = "dev"
+         Environment = "dev"
       }
 }
 
@@ -12,6 +12,7 @@ variable "ec2_tags" {
      default = {
 
           Name= "function-demo"
+          Environment = "prod"
      }
 }
 
